@@ -139,7 +139,7 @@ h1{
             WhatsApp Us
         </a>
 
-        <a class="btn secondary" href="https://instagram.com/villagerscafeindia">
+        <a class="btn secondary" href="https://www.instagram.com/villagerscafeindia?igsh=Z2djOTV0djFocm92">
             Instagram
         </a>
     </div>
