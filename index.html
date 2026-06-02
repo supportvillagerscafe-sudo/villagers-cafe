@@ -1,157 +1,559 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Villagers Cafe | Opening Soon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villagers Cafe</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+  <style>
 
-body{
-    font-family:'Poppins',sans-serif;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80');
-    background-size:cover;
-    background-position:center;
-    color:#fff;
-}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
 
-.container{
-    max-width:700px;
-    padding:30px;
-}
+    body{
+      background:#faf7f2;
+      overflow-x:hidden;
+      color:#222;
+    }
 
-.logo{
-    font-size:4rem;
-    margin-bottom:10px;
-}
+    html{
+      scroll-behavior:smooth;
+    }
 
-h1{
-    font-size:3.2rem;
-    margin-bottom:10px;
-}
+    /* NAVBAR */
 
-.tagline{
-    font-size:1.2rem;
-    color:#f5d7b2;
-    margin-bottom:20px;
-}
-
-.coming{
-    display:inline-block;
-    background:#c98b47;
-    color:#fff;
-    padding:12px 28px;
-    border-radius:40px;
-    font-weight:600;
-    margin-bottom:25px;
-}
-
-.desc{
-    line-height:1.8;
-    margin-bottom:35px;
-    color:#eee;
-}
-
-.buttons{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-.btn{
-    text-decoration:none;
-    padding:14px 28px;
-    border-radius:40px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.primary{
-    background:#c98b47;
-    color:#fff;
-}
-
-.secondary{
-    border:2px solid #fff;
-    color:#fff;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-.footer{
-    margin-top:40px;
-    color:#ddd;
-    font-size:.9rem;
-}
-
-@media(max-width:768px){
-    h1{
-        font-size:2.3rem;
+    nav{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:999;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgba(0,0,0,0.65);
+      backdrop-filter:blur(10px);
     }
 
     .logo{
-        font-size:3rem;
+      color:#9cff57;
+      font-size:30px;
+      font-weight:700;
     }
-}
-</style>
+
+    nav ul{
+      display:flex;
+      gap:30px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#9cff57;
+    }
+
+    /* HERO */
+
+    header{
+      width:100%;
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.70),rgba(0,0,0,0.70)),
+      url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero{
+      max-width:900px;
+      animation:fadeUp 1.2s ease;
+    }
+
+    .hero img{
+      width:180px;
+      height:180px;
+      object-fit:cover;
+      border-radius:50%;
+      border:5px solid white;
+      margin-bottom:25px;
+      box-shadow:0 10px 35px rgba(0,0,0,0.4);
+      background:white;
+    }
+
+    .hero h1{
+      color:#9cff57;
+      font-size:90px;
+      line-height:1;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      color:white;
+      font-size:24px;
+      margin-bottom:35px;
+      letter-spacing:1px;
+    }
+
+    .hero-btns{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:18px;
+    }
+
+    .btn{
+      padding:15px 34px;
+      border-radius:50px;
+      text-decoration:none;
+      color:white;
+      background:#1f4d1f;
+      font-weight:600;
+      transition:0.4s;
+      border:2px solid transparent;
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+      background:#2e7a2e;
+    }
+
+    .btn-outline{
+      background:transparent;
+      border:2px solid white;
+    }
+
+    .btn-outline:hover{
+      background:white;
+      color:#111;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:90px 10%;
+    }
+
+    .title{
+      text-align:center;
+      font-size:48px;
+      color:#1f4d1f;
+      margin-bottom:25px;
+      font-weight:700;
+    }
+
+    /* MENU */
+
+    .menu-grid{
+      margin-top:50px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .menu-card{
+      background:white;
+      padding:35px;
+      border-radius:25px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      transition:0.4s;
+    }
+
+    .menu-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .menu-card h3{
+      font-size:25px;
+      margin:15px 0;
+      color:#1f4d1f;
+    }
+
+    .menu-card p{
+      color:#666;
+      line-height:1.8;
+    }
+
+    .emoji{
+      font-size:55px;
+    }
+
+    /* ABOUT */
+
+    .about{
+      background:white;
+      text-align:center;
+    }
+
+    .about p{
+      max-width:900px;
+      margin:auto;
+      line-height:2;
+      color:#555;
+      font-size:18px;
+    }
+
+    .founder{
+      margin-top:35px;
+      font-size:25px;
+      font-weight:700;
+      color:#1f4d1f;
+    }
+
+    /* GALLERY */
+
+    .gallery-grid{
+      margin-top:50px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .gallery-grid img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+      border-radius:20px;
+      transition:0.4s;
+    }
+
+    .gallery-grid img:hover{
+      transform:scale(1.03);
+    }
+
+    /* CONTACT */
+
+    .contact{
+      background:#1f4d1f;
+      color:white;
+      text-align:center;
+    }
+
+    .contact p{
+      font-size:20px;
+      margin-bottom:35px;
+    }
+
+    .contact-links{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .contact-links a{
+      text-decoration:none;
+      color:white;
+      border:2px solid white;
+      padding:14px 30px;
+      border-radius:40px;
+      transition:0.4s;
+    }
+
+    .contact-links a:hover{
+      background:white;
+      color:#1f4d1f;
+    }
+
+    footer{
+      background:#111;
+      color:#aaa;
+      text-align:center;
+      padding:25px;
+      font-size:15px;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero h1{
+        font-size:55px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .hero img{
+        width:140px;
+        height:140px;
+      }
+
+      .title{
+        font-size:36px;
+      }
+
+    }
+
+  </style>
 </head>
+
 <body>
 
-<div class="container">
+<!-- NAVBAR -->
 
-    <div class="logo">☕</div>
+<nav>
+
+  <div class="logo">Villagers Cafe</div>
+
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#founder">Founder</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#visit">Visit Me</a></li>
+    <li><a href="#contact">Chat With Us</a></li>
+  </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<header id="home">
+
+  <div class="hero">
+
+    <img src="1000276385.png" alt="Villagers Cafe Logo">
 
     <h1>Villagers Cafe</h1>
 
-    <p class="tagline">
-        Fresh Coffee • Great Food • Village Vibes
+    <p>
+      GOOD FOOD • GOOD MOOD • GREAT MEMORIES
     </p>
 
-    <div class="coming">
-        Opening Soon
+    <div class="hero-btns">
+
+      <a href="https://villagerscafe.shop" target="_blank" class="btn">
+        Explore Cafe
+      </a>
+
+      <a href="https://wa.me/916391673198" target="_blank" class="btn btn-outline">
+        Order Now
+      </a>
+
     </div>
 
-    <p class="desc">
-        Something special is brewing.
-        We are preparing a warm and cozy place where great coffee,
-        delicious food and good conversations come together.
+  </div>
+
+</header>
+
+<!-- MENU -->
+
+<section id="menu">
+
+  <h2 class="title">Our Menu</h2>
+
+  <div class="menu-grid">
+
+    <div class="menu-card">
+      <div class="emoji">☕</div>
+      <h3>Hot Coffee</h3>
+      <p>
+        Freshly brewed premium coffee with rich aroma and taste.
+      </p>
+    </div>
+
+    <div class="menu-card">
+      <div class="emoji">🍔</div>
+      <h3>Burgers & Fries</h3>
+      <p>
+        Crispy fries, juicy burgers and delicious fast food.
+      </p>
+    </div>
+
+    <div class="menu-card">
+      <div class="emoji">🥤</div>
+      <h3>Cold Beverages</h3>
+      <p>
+        Refreshing drinks, shakes and cool mocktails.
+      </p>
+    </div>
+
+    <div class="menu-card">
+      <div class="emoji">🍕</div>
+      <h3>Snacks</h3>
+      <p>
+        Tasty snacks and cafe bites perfect for hangouts.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOUNDER -->
+
+<section id="founder" class="about">
+
+  <h2 class="title">Founder</h2>
+
+  <img src="1000276385.png"
+  style="
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:25px;
+  border:5px solid #1f4d1f;
+  ">
+
+  <div class="founder">
+    Ashish Mishra
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <h2 class="title">About Us</h2>
+
+  <div class="about">
+
+    <p>
+
+      Villagers Cafe is a modern village-theme cafe located at
+      <b>Hal Gate Korwa, Musafirkhana</b>.
+
+      Inspired by the vibe of youth cafes and chai culture,
+      we created a place where people can relax, enjoy tasty food,
+      click aesthetic pictures and make unforgettable memories.
+
+      From hot coffee to delicious fast food,
+      Villagers Cafe brings together taste, ambience and happiness.
+
     </p>
 
-    <div class="buttons">
-        <a class="btn primary" href="https://wa.me/916391673198">
-            WhatsApp Us
-        </a>
+  </div>
 
-        <a class="btn secondary" href="https://instagram.com/villagerscafeindia">
-            Instagram
-        </a>
-        <a class="btn secondary" href="https://maps.app.goo.gl/sZk5aSWZXjVm3n1ZA?g_st=ac" target="_blank">
-    📍 Google Maps
-</a>
-    </div>
+</section>
 
-    <div class="footer">
-        © 2026 Villagers Cafe • villagerscafe.shop
-    </div>
+<!-- GALLERY -->
 
-</div>
+<section>
+
+  <h2 class="title">Cafe Vibes</h2>
+
+  <div class="gallery-grid">
+
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop">
+
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
+
+    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1200&auto=format&fit=crop">
+
+  </div>
+
+</section>
+
+<!-- LOCATION -->
+
+<section id="visit" class="contact">
+
+  <h2 class="title" style="color:white;">Visit Me</h2>
+
+  <p>
+    📍 Hal Gate Korwa, Musafirkhana
+  </p>
+
+  <div class="contact-links">
+
+    <a href="https://maps.app.goo.gl/sZk5aSWZXjVm3n1ZA?g_st=ac"
+    target="_blank">
+      Open Location
+    </a>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <h2 class="title">Chat With Us</h2>
+
+  <div class="contact-links" style="justify-content:center;">
+
+    <a href="https://wa.me/916391673198"
+    target="_blank"
+    style="
+    background:#1f4d1f;
+    color:white;
+    border:none;
+    ">
+      WhatsApp
+    </a>
+
+    <a href="https://instagram.com/villagerscafeindia"
+    target="_blank"
+    style="
+    background:#111;
+    color:white;
+    border:none;
+    ">
+      Instagram
+    </a>
+
+    <a href="https://villagerscafe.shop"
+    target="_blank"
+    style="
+    background:#9cff57;
+    color:#111;
+    border:none;
+    ">
+      Website
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+
+  © 2026 Villagers Cafe • Designed With Deshi vibe❤️
+
+</footer>
 
 </body>
 </html>
