@@ -1,51 +1,154 @@
-# villagers-cafe
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Villagers Cafe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villagers Cafe | Opening Soon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-margin:0;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:#f5efe6;
-font-family:Arial,sans-serif;
-text-align:center;
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    color:#fff;
 }
-.box{
-padding:30px;
+
+.container{
+    max-width:700px;
+    padding:30px;
 }
+
+.logo{
+    font-size:4rem;
+    margin-bottom:10px;
+}
+
 h1{
-font-size:55px;
-margin:0;
-color:#5b3a29;
+    font-size:3.2rem;
+    margin-bottom:10px;
 }
-p{
-font-size:20px;
-color:#666;
+
+.tagline{
+    font-size:1.2rem;
+    color:#f5d7b2;
+    margin-bottom:20px;
 }
+
+.coming{
+    display:inline-block;
+    background:#c98b47;
+    color:#fff;
+    padding:12px 28px;
+    border-radius:40px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.desc{
+    line-height:1.8;
+    margin-bottom:35px;
+    color:#eee;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
 .btn{
-display:inline-block;
-margin-top:15px;
-padding:12px 24px;
-background:#5b3a29;
-color:white;
-text-decoration:none;
-border-radius:30px;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.primary{
+    background:#c98b47;
+    color:#fff;
+}
+
+.secondary{
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.footer{
+    margin-top:40px;
+    color:#ddd;
+    font-size:.9rem;
+}
+
+@media(max-width:768px){
+    h1{
+        font-size:2.3rem;
+    }
+
+    .logo{
+        font-size:3rem;
+    }
 }
 </style>
 </head>
 <body>
-<div class="box">
-<h1>☕ Villagers Cafe</h1>
-<p>We're Brewing Something Special</p>
-<p>Opening Soon</p>
-<a class="btn" href="https://instagram.com/">Follow Us</a>
+
+<div class="container">
+
+    <div class="logo">☕</div>
+
+    <h1>Villagers Cafe</h1>
+
+    <p class="tagline">
+        Fresh Coffee • Great Food • Village Vibes
+    </p>
+
+    <div class="coming">
+        Opening Soon
+    </div>
+
+    <p class="desc">
+        Something special is brewing.
+        We are preparing a warm and cozy place where great coffee,
+        delicious food and good conversations come together.
+    </p>
+
+    <div class="buttons">
+        <a class="btn primary" href="https://wa.me/91XXXXXXXXXX">
+            WhatsApp Us
+        </a>
+
+        <a class="btn secondary" href="https://instagram.com/villagerscafe">
+            Instagram
+        </a>
+    </div>
+
+    <div class="footer">
+        © 2026 Villagers Cafe • villagerscafe.shop
+    </div>
+
 </div>
+
 </body>
 </html>
