@@ -135,11 +135,11 @@ h1{
     </p>
 
     <div class="buttons">
-        <a class="btn primary" href="https://wa.me/91XXXXXXXXXX">
+        <a class="btn primary" href="https://wa.me/916391673198">
             WhatsApp Us
         </a>
 
-        <a class="btn secondary" href="https://instagram.com/villagerscafe">
+        <a class="btn secondary" href="https://instagram.com/villagerscafeindia">
             Instagram
         </a>
     </div>
